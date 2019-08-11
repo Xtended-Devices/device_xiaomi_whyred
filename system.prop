@@ -281,6 +281,9 @@ sys.shenchao_td4310_length=45
 sys.tianma_nt36672_offset=2
 sys.tianma_nt36672_length=45
 sys.huaxing_nt36672_offset=2
+
+#Xtended official
+ro.xtended.display.version=XP8-v16-OFFICIAL
 sys.huaxing_nt36672_length=44
 
 #lct liuxuan add the dom ignore time

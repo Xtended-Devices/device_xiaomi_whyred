@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2017-2019 The Xtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
+# Inherit APN info from device
+PRODUCT_COPY_FILES += \
+    device/xiaomi/whyred/configs/apns-conf.xml:system/etc/apns-conf.xml
+
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
@@ -26,9 +30,9 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Inherit some common Mokee stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_whyred
+PRODUCT_NAME := xtended_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -45,7 +49,4 @@ BUILD_FINGERPRINT := "xiaomi/whyred/whyred:9/PKQ1.180904.001/9.8.1:user/release-
 
 TARGET_VENDOR := Xiaomi
 
-# OTA
-PRODUCT_PROPERTY_OVERRIDES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/xiaomeme-whyred/OTA/master/lineage.json
-
+XTENDED_BUILD_TYPE=OFFICIAL
