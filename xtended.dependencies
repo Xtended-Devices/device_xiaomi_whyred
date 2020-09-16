@@ -10,6 +10,12 @@
     "repository"  : "Xtended-Devices/kernel_xiaomi_whyred",
     "target_path" : "kernel/xiaomi/whyred",
     "branch"      : "xq"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "LineageOS/android_hardware_lineage_livedisplay",
+    "target_path" : "hardware/lineage/livedisplay",
+    "branch"      : "lineage-17.1"
   }
 ]
      
